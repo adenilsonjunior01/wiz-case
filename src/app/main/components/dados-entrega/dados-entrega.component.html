@@ -1,0 +1,31 @@
+<h3 class="mt-5 mb-5">Dados da Entrega</h3>
+<form [formGroup]="formDadosEntrega">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="form-group">
+        <input type="text" class="form-control" formControlName="cep" id="cep" placeholder="CEP">
+      </div>
+    </div><!-- /col-md-12-->
+    <div class="col-md-12">
+      <div class="form-group">
+        <input type="text" class="form-control" formControlName="endereco" id="endereco" placeholder="Endereço">
+      </div>
+    </div><!-- /col-md-12-->
+    <div class="col-6">
+      <ng-select [items]="pais"
+          [selectOnTab]="true"
+          bindValue="value"
+          placeholder="País"
+          formControlName="pais">
+    </ng-select>
+    </div>
+    <div class="col-6">
+      <ng-select [items]="estados"
+          [selectOnTab]="true"
+          bindValue="value"
+          placeholder="Estado"
+          formControlName="estado">
+        </ng-select>
+    </div>
+  </div><!--  /row-->
+</form>

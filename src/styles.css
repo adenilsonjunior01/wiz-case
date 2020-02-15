@@ -1,0 +1,10 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@ng-select/ng-select/themes/default.theme.css";
+
+.bg-label {
+  background-color: #F4F4F4F4;
+}
+
+label {
+  margin: 0;
+}

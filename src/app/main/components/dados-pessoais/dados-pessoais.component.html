@@ -1,0 +1,36 @@
+<form [formGroup]="formDadosPessoais">
+  <div class="row">
+    <div class="col-md-6 col-sm-12">
+      <div class="form-group">
+        <input type="text" id="primeironome" formControlName="primeiroNome" class="form-control" placeholder="Primeiro Nome">
+      </div>
+    </div><!-- /col-md-6 col-sm-12-->
+    <div class="col-md-6 col-sm-12">
+      <div class="form-group">
+        <input type="text" id="segundonome" formControlName="segundoNome" class="form-control" placeholder="Segundo Nome">
+      </div>
+    </div><!-- /col-md-6 col-sm-12-->
+    <div class="col-md-6 col-sm-12">
+      <div class="form-group">
+        <input type="text" id="nuCpf" formControlName="nuCpf" class="form-control" placeholder="CPF">
+      </div>
+    </div><!-- /col-md-6 col-sm-12-->
+    <div class="col-md-6 col-sm-12">
+      <div class="form-group">
+        <input type="text" id="dtNascimento" formControlName="dtNascimento" class="form-control" placeholder="Data de Nascimento">
+      </div>
+    </div><!-- /col-md-6 col-sm-12-->
+    <div class="col-12">
+      <div class="form-group">
+        <input type="email" id="email" formControlName="email" class="form-control" placeholder="Email">
+      </div>
+    </div><!-- /col-md-6 col-sm-12-->
+    <div class="col-12">
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="checkbox" id="check" (click)="click($event.target.value)" value={{checked}}>
+        <label class="form-check-label" for="check">Adicionar Acompanhante</label>
+      </div>
+    </div>
+  </div>
+</form>
+
