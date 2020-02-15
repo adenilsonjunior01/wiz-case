@@ -12,3 +12,7 @@ label {
 .small-invalid {
   color: #dc3545;
 }
+
+ng-select.ng-invalid.ng-touched .ng-select-container {
+  color: #dc3545;
+}

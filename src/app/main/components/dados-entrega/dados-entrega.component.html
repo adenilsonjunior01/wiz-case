@@ -3,12 +3,16 @@
   <div class="row">
     <div class="col-md-12">
       <div class="form-group">
-        <input type="text" class="form-control" formControlName="cep" id="cep" placeholder="CEP">
+        <input type="text" class="form-control" formControlName="cep" id="cep" placeholder="CEP"
+        [ngClass]="{'is-invalid': !formDadosEntrega.get('cep').valid && formDadosEntrega.get('cep').touched}">
+        <small class="small-invalid" *ngIf="!formDadosEntrega.get('cep').valid && formDadosEntrega.get('cep').touched" >* Campo Obrigatório</small>
       </div>
     </div><!-- /col-md-12-->
     <div class="col-md-12">
       <div class="form-group">
-        <input type="text" class="form-control" formControlName="endereco" id="endereco" placeholder="Endereço">
+        <input type="text" class="form-control" formControlName="endereco" id="endereco" placeholder="Endereço"
+        [ngClass]="{'is-invalid': !formDadosEntrega.get('endereco').valid && formDadosEntrega.get('endereco').touched}">
+        <small class="small-invalid" *ngIf="!formDadosEntrega.get('endereco').valid && formDadosEntrega.get('endereco').touched" >* Campo Obrigatório</small>
       </div>
     </div><!-- /col-md-12-->
     <div class="col-6">
@@ -29,16 +33,17 @@
     </div><!-- /col-md-6-->
     <div class="col-md-12 mt-3">
       <div class="form-group">
-        <input type="text" class="form-control" formControlName="cidade" id="cidade" placeholder="Cidade">
+        <input type="text" class="form-control" formControlName="cidade" id="cidade" placeholder="Cidade"
+        [ngClass]="{'is-invalid': !formDadosEntrega.get('cidade').valid && formDadosEntrega.get('cidade').touched}">
+        <small class="small-invalid" *ngIf="!formDadosEntrega.get('cidade').valid && formDadosEntrega.get('cidade').touched" >* Campo Obrigatório</small>
       </div>
     </div>
     <div class="col-md-12">
       <div class="form-group">
-        <input type="number" class="form-control" formControlName="telefone" id="telefone" placeholder="Telefone">
+        <input type="number" class="form-control" formControlName="telefone" id="telefone" placeholder="Telefone"
+        [ngClass]="{'is-invalid': !formDadosEntrega.get('telefone').valid && formDadosEntrega.get('telefone').touched}">
+        <small class="small-invalid" *ngIf="!formDadosEntrega.get('telefone').valid && formDadosEntrega.get('telefone').touched" >* Campo Obrigatório</small>
       </div>
-    </div>
-    <div class="col-12 d-flex justify-content-end">
-      <button class="btn btn-primary text-uppercase pt-3 pb-3 pl-5 pr-5">Enviar</button>
     </div>
   </div><!--  /row-->
 </form>

@@ -22,6 +22,10 @@ import { NgSelectModule } from '@ng-select/ng-select';
     NgSelectModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  exports: [
+    DadosPessoaisComponent,
+    DadosEntregaComponent
+  ]
 })
 export class AppModule { }

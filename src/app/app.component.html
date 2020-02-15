@@ -26,5 +26,10 @@
       <app-dados-entrega></app-dados-entrega>
     </div><!-- /col-md-6-->
   </div><!-- /row-->
+  <div class="row">
+    <div class="col-6 d-flex justify-content-end">
+      <button type="button" class="btn btn-primary text-uppercase pt-3 pb-3 pl-5 pr-5" (click)="submit()" [disabled]="dadosPessoais.formDadosPessoais.invalid" >Enviar</button>
+    </div>
+  </div>
   <hr>
 </div>
