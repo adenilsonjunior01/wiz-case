@@ -8,3 +8,7 @@
 label {
   margin: 0;
 }
+
+.small-invalid {
+  color: #dc3545;
+}

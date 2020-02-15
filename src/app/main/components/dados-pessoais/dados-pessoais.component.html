@@ -2,27 +2,37 @@
   <div class="row">
     <div class="col-md-6 col-sm-12">
       <div class="form-group">
-        <input type="text" id="primeironome" formControlName="primeiroNome" class="form-control" placeholder="Primeiro Nome">
+        <input type="text" id="primeironome" formControlName="primeiroNome" class="form-control" placeholder="Primeiro Nome"
+        [ngClass]="{'is-invalid': !formDadosPessoais.get('primeiroNome').valid && formDadosPessoais.get('primeiroNome').touched}" >
+        <small class="small-invalid" *ngIf="!formDadosPessoais.get('primeiroNome').valid && formDadosPessoais.get('primeiroNome').touched" >* Campo Obrigatório</small>
       </div>
     </div><!-- /col-md-6 col-sm-12-->
     <div class="col-md-6 col-sm-12">
       <div class="form-group">
-        <input type="text" id="segundonome" formControlName="segundoNome" class="form-control" placeholder="Segundo Nome">
+        <input type="text" id="segundonome" formControlName="segundoNome" class="form-control" placeholder="Segundo Nome"
+        [ngClass]="{'is-invalid': !formDadosPessoais.get('segundoNome').valid && formDadosPessoais.get('segundoNome').touched}">
+        <small class="small-invalid" *ngIf="!formDadosPessoais.get('segundoNome').valid && formDadosPessoais.get('segundoNome').touched" >* Campo Obrigatório</small>
       </div>
     </div><!-- /col-md-6 col-sm-12-->
     <div class="col-md-6 col-sm-12">
       <div class="form-group">
-        <input type="text" id="nuCpf" formControlName="nuCpf" class="form-control" placeholder="CPF">
+        <input type="text" id="nuCpf" formControlName="nuCpf" class="form-control" placeholder="CPF"
+        [ngClass]="{'is-invalid': !formDadosPessoais.get('nuCpf').valid && formDadosPessoais.get('nuCpf').touched}">
+        <small class="small-invalid" *ngIf="!formDadosPessoais.get('nuCpf').valid && formDadosPessoais.get('nuCpf').touched" >* Campo Obrigatório</small>
       </div>
     </div><!-- /col-md-6 col-sm-12-->
     <div class="col-md-6 col-sm-12">
       <div class="form-group">
-        <input type="text" id="dtNascimento" formControlName="dtNascimento" class="form-control" placeholder="Data de Nascimento">
+        <input type="text" id="dtNascimento" formControlName="dtNascimento" class="form-control" placeholder="Data de Nascimento"
+        [ngClass]="{'is-invalid': !formDadosPessoais.get('dtNascimento').valid && formDadosPessoais.get('dtNascimento').touched}">
+        <small class="small-invalid" *ngIf="!formDadosPessoais.get('dtNascimento').valid && formDadosPessoais.get('dtNascimento').touched" >* Campo Obrigatório</small>
       </div>
     </div><!-- /col-md-6 col-sm-12-->
     <div class="col-12">
       <div class="form-group">
-        <input type="email" id="email" formControlName="email" class="form-control" placeholder="Email">
+        <input type="email" id="email" formControlName="email" class="form-control" placeholder="Email"
+        [ngClass]="{'is-invalid': !formDadosPessoais.get('email').valid && formDadosPessoais.get('email').touched}">
+        <small class="small-invalid" *ngIf="!formDadosPessoais.get('email').valid && formDadosPessoais.get('email').touched" >* Campo Obrigatório</small>
       </div>
     </div><!-- /col-md-6 col-sm-12-->
     <div class="col-12">

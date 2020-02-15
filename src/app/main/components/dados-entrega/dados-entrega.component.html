@@ -18,7 +18,7 @@
           placeholder="País"
           formControlName="pais">
     </ng-select>
-    </div>
+    </div><!-- /col-md-6-->
     <div class="col-6">
       <ng-select [items]="estados"
           [selectOnTab]="true"
@@ -26,6 +26,19 @@
           placeholder="Estado"
           formControlName="estado">
         </ng-select>
+    </div><!-- /col-md-6-->
+    <div class="col-md-12 mt-3">
+      <div class="form-group">
+        <input type="text" class="form-control" formControlName="cidade" id="cidade" placeholder="Cidade">
+      </div>
+    </div>
+    <div class="col-md-12">
+      <div class="form-group">
+        <input type="number" class="form-control" formControlName="telefone" id="telefone" placeholder="Telefone">
+      </div>
+    </div>
+    <div class="col-12 d-flex justify-content-end">
+      <button class="btn btn-primary text-uppercase pt-3 pb-3 pl-5 pr-5">Enviar</button>
     </div>
   </div><!--  /row-->
 </form>
