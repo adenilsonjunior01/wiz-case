@@ -1,0 +1,28 @@
+<div class="row">
+  <div class="col-5">
+    <div>
+      <img [src]="posterFilme" alt="" class="img-fluid">
+    </div>
+  </div>
+  <div class="col">
+    <div class="row">
+      <div class="col-12">
+        <span class="font-w-600">Ingresso</span>
+      </div>
+      <div class="col-12">
+        <span class="text-uppercase font-w-600">Filme: </span>{{filme?.title}}
+      </div>
+      <div class="col-12">
+        <span class="font-w-600">Lançamento: </span>{{filme?.release_date | date: 'mediumDate'}}
+      </div>
+    </div>
+  </div>
+</div>
+<hr>
+
+<div class="row">
+  <div class="col-12">
+    <h4>Visão Geral</h4>
+    <p>{{filme?.overview}}</p>
+  </div>
+</div>

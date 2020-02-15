@@ -13,21 +13,24 @@
     </div>
     <div class="col-12">
       <div class="row bg-label p-3 mb-3">
-        <div class="col-6">
-          <label class="text-uppercase">Dados Pessoais</label>
+        <div class="col-8">
+          <label class="text-uppercase font-w-600">Dados Pessoais</label>
         </div>
-        <div class="col-6">
-          <label class="text-uppercase">Seu Ingresso</label>
+        <div class="col-4">
+          <label class="text-uppercase font-w-600">Seu Ingresso</label>
         </div>
       </div>
     </div>
-    <div class="col-md-6">
+    <div class="col-md-8">
       <app-dados-pessoais></app-dados-pessoais>
       <app-dados-entrega></app-dados-entrega>
     </div><!-- /col-md-6-->
+    <div class="col-md-4">
+      <app-dados-filme></app-dados-filme>
+    </div><!-- /col-md-6-->
   </div><!-- /row-->
   <div class="row">
-    <div class="col-6 d-flex justify-content-end">
+    <div class="col-8 d-flex justify-content-end">
       <button type="button" class="btn btn-primary text-uppercase pt-3 pb-3 pl-5 pr-5" (click)="submit()" >Enviar</button>
     </div>
   </div>

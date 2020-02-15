@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { NgSelectConfig } from '@ng-select/ng-select';
-import { CepApiService } from '../../services/cep-api.service';
+import { CepApiService } from '../../services/cep-api/cep-api.service';
 
 @Component({
   selector: 'app-dados-entrega',
