@@ -3,9 +3,15 @@
   <div class="row">
     <div class="col-md-12">
       <div class="form-group">
-        <input type="text" class="form-control" formControlName="cep" id="cep" placeholder="CEP"
+        <input type="text" class="form-control" formControlName="cep" id="cep" placeholder="CEP" (change)="getDadosEntrega($event.target.value)"
         [ngClass]="{'is-invalid': !formDadosEntrega.get('cep').valid && formDadosEntrega.get('cep').touched}">
         <small class="small-invalid" *ngIf="!formDadosEntrega.get('cep').valid && formDadosEntrega.get('cep').touched" >* Campo Obrigatório</small>
+        <div  *ngIf="loadingCep" class="mt-2 edit-loading d-flex align-items-center">
+          <div class="spinner-border text-secondary size-spinner" role="status">
+            <span class="sr-only">Loading...</span>
+          </div>
+          <p class="m-0 d-inline pl-2">Buscando dados...</p>
+        </div>
       </div>
     </div><!-- /col-md-12-->
     <div class="col-md-12">
@@ -16,22 +22,13 @@
       </div>
     </div><!-- /col-md-12-->
     <div class="col-6">
-      <ng-select [items]="pais"
-          [selectOnTab]="true"
-          bindValue="value"
-          placeholder="País"
-          formControlName="pais">
-    </ng-select>
+      <div class="form-group">
+        <input type="text" class="form-control" formControlName="estado" id="estado" placeholder="Estado"
+          [ngClass]="{'is-invalid': !formDadosEntrega.get('estado').valid && formDadosEntrega.get('estado').touched}">
+          <small class="small-invalid" *ngIf="!formDadosEntrega.get('estado').valid && formDadosEntrega.get('estado').touched" >* Campo Obrigatório</small>
+      </div>
     </div><!-- /col-md-6-->
-    <div class="col-6">
-      <ng-select [items]="estados"
-          [selectOnTab]="true"
-          bindValue="value"
-          placeholder="Estado"
-          formControlName="estado">
-        </ng-select>
-    </div><!-- /col-md-6-->
-    <div class="col-md-12 mt-3">
+    <div class="col-md-6">
       <div class="form-group">
         <input type="text" class="form-control" formControlName="cidade" id="cidade" placeholder="Cidade"
         [ngClass]="{'is-invalid': !formDadosEntrega.get('cidade').valid && formDadosEntrega.get('cidade').touched}">

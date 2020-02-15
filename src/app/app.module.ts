@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { DadosPessoaisComponent } from './main/components/dados-pessoais/dados-pessoais.component';
 import { DadosEntregaComponent } from './main/components/dados-entrega/dados-entrega.component';
 import { NgSelectModule } from '@ng-select/ng-select';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { NgSelectModule } from '@ng-select/ng-select';
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
-    NgSelectModule
+    NgSelectModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent],
