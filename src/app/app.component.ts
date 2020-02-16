@@ -42,6 +42,7 @@ export class AppComponent implements OnInit {
             const controle = this.dadosAcompanhante.formAcompanhanter.get(campo);
             controle.markAsTouched();
           });
+          return;
         }
       }
       const cpf = this.dadosPessoais.formDadosPessoais.value.nuCpf.replace(/\D/g, '');

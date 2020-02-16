@@ -23,7 +23,8 @@
     </div><!-- /col-md-6 col-sm-12-->
     <div class="col-md-6 col-sm-12">
       <div class="form-group">
-        <input type="text" id="dtNascimento" formControlName="dtNascimento" class="form-control" placeholder="Data de Nascimento" bsDatepicker  [bsConfig]="{ dateInputFormat: 'DD/MM/YYYY', containerClass: 'theme-blue',isAnimated: true }"
+        <input type="text" id="dtNascimento" formControlName="dtNascimento" class="form-control" placeholder="Data de Nascimento" bsDatepicker 
+        [bsConfig]="{ dateInputFormat: 'DD/MM/YYYY', containerClass: 'theme-blue',isAnimated: true }"
         [ngClass]="{'is-invalid': !formDadosPessoais.get('dtNascimento').valid && formDadosPessoais.get('dtNascimento').touched}">
         <small class="small-invalid" *ngIf="!formDadosPessoais.get('dtNascimento').valid && formDadosPessoais.get('dtNascimento').touched" >* Campo Obrigatório</small>
       </div>
@@ -35,7 +36,6 @@
         <small class="small-invalid" *ngIf="!formDadosPessoais.get('email').valid && formDadosPessoais.get('email').touched" >* Campo Obrigatório</small>
       </div>
     </div><!-- /col-md-6 col-sm-12-->
-
   </div>
 </form>
 

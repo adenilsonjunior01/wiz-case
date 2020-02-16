@@ -1,27 +1,17 @@
-
-<div class="container">
-  <div class="row">
+<main class="container">
+  <div class="row mb-5">
     <div class="col-12 mt-5">
       <header class="text-center">
-        <h1>LOGO</h1>
+        <img src="../assets/images/logo.png" alt="logo" class="img-fluid">
       </header>
     </div><!-- /col-12 -->
   </div><!-- /row-->
-  <div class="row ">
+  <section class="row ">
     <div class="col-12">
       <h1 class="text-uppercase">Formulário</h1>
     </div>
-    <div class="col-12">
-      <div class="row bg-label p-3 mb-3">
-        <div class="col-8">
-          <label class="text-uppercase font-w-600">Dados Pessoais</label>
-        </div>
-        <div class="col-4">
-          <label class="text-uppercase font-w-600">Seu Ingresso</label>
-        </div>
-      </div>
-    </div>
     <div class="col-md-8">
+      <h4 class="text-uppercase font-w-600 mt-3 mb-4">Dados Pessoais</h4>
       <app-dados-pessoais></app-dados-pessoais>
       <div class="col-12" [formGroup]="form">
         <div class="form-check form-check-inline">
@@ -29,20 +19,25 @@
           <label class="form-check-label" for="check">Adicionar Acompanhante</label>
         </div>
       </div>
+
       <app-dados-acompanhante *ngIf="form.value.acompanhante === true"></app-dados-acompanhante>
+
+      <h4 class="mt-5 mb-4 text-uppercase">Dados da Entrega</h4>
       <app-dados-entrega></app-dados-entrega>
     </div><!-- /col-md-6-->
     <div class="col-md-4">
+      <h4 class="text-uppercase font-w-600 mt-3 mb-4">Seu Ingresso</h4>
       <app-dados-filme></app-dados-filme>
     </div><!-- /col-md-6-->
-  </div><!-- /row-->
+  </section><!-- /row-->
   <div class="row">
     <div class="col-8 d-flex justify-content-end">
-      <button type="button" class="btn btn-primary text-uppercase pt-3 pb-3 pl-5 pr-5" (click)="verificaDados()" >Enviar</button>
+      <button type="button" class="btn btn-primary text-uppercase pt-3 pb-3 pl-4 pr-4"
+        (click)="verificaDados()">Enviar</button>
     </div>
   </div>
   <hr class="mt-5 mb-5">
   <app-sobre></app-sobre>
   <hr class="mt-5 mb-5">
   <app-footer></app-footer>
-</div>
+</main>

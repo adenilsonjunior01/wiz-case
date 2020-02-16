@@ -17,6 +17,11 @@ label {
   color: #dc3545;
 }
 
+.img-sobre {
+  height: 80px;
+}
+
+/* === FORMATAÇÕES SPINNER === */
 .size-spinner {
   font-size: 12px;
   width: 1.5rem;
@@ -27,6 +32,11 @@ label {
   font-size: 14px;
 }
 
+.sobre-color {
+  color: #003261;
+}
+
+/* === FORMATAÇÕES FOOTER ===*/
 .font-w-600 {
   font-weight: 600;
 }
