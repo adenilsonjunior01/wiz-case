@@ -25,7 +25,7 @@
       <app-dados-pessoais></app-dados-pessoais>
       <div class="col-12" [formGroup]="form">
         <div class="form-check form-check-inline">
-          <input class="form-check-input" type="checkbox" id="check" (click)="click($event.target.value)" formControlName="acompanhante">
+          <input class="form-check-input" type="checkbox" id="check" formControlName="acompanhante">
           <label class="form-check-label" for="check">Adicionar Acompanhante</label>
         </div>
       </div>
@@ -41,5 +41,8 @@
       <button type="button" class="btn btn-primary text-uppercase pt-3 pb-3 pl-5 pr-5" (click)="verificaDados()" >Enviar</button>
     </div>
   </div>
-  <hr>
+  <hr class="mt-5 mb-5">
+  <app-sobre></app-sobre>
+  <hr class="mt-5 mb-5">
+  <app-footer></app-footer>
 </div>

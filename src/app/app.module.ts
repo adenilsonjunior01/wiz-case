@@ -18,6 +18,8 @@ import { TextMaskModule } from 'angular2-text-mask';
 
 import { defineLocale } from 'ngx-bootstrap/chronos';
 import { deLocale } from 'ngx-bootstrap/locale';
+import { FooterComponent } from './main/components/footer/footer.component';
+import { SobreComponent } from './main/components/sobre/sobre.component';
 
 defineLocale('de', deLocale);
 registerLocaleData(localePt, 'pt');
@@ -27,7 +29,9 @@ registerLocaleData(localePt, 'pt');
     DadosPessoaisComponent,
     DadosEntregaComponent,
     DadosFilmeComponent,
-    DadosAcompanhanteComponent
+    DadosAcompanhanteComponent,
+    FooterComponent,
+    SobreComponent
   ],
   imports: [
     CommonModule,
