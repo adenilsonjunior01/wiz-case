@@ -23,6 +23,13 @@
     </div>
     <div class="col-md-8">
       <app-dados-pessoais></app-dados-pessoais>
+      <div class="col-12" [formGroup]="form">
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="checkbox" id="check" (click)="click($event.target.value)" formControlName="acompanhante">
+          <label class="form-check-label" for="check">Adicionar Acompanhante</label>
+        </div>
+      </div>
+      <app-dados-acompanhante *ngIf="form.value.acompanhante === true"></app-dados-acompanhante>
       <app-dados-entrega></app-dados-entrega>
     </div><!-- /col-md-6-->
     <div class="col-md-4">
@@ -31,7 +38,7 @@
   </div><!-- /row-->
   <div class="row">
     <div class="col-8 d-flex justify-content-end">
-      <button type="button" class="btn btn-primary text-uppercase pt-3 pb-3 pl-5 pr-5" (click)="submit()" >Enviar</button>
+      <button type="button" class="btn btn-primary text-uppercase pt-3 pb-3 pl-5 pr-5" (click)="verificaDados()" >Enviar</button>
     </div>
   </div>
   <hr>

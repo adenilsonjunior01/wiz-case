@@ -5,7 +5,8 @@
 export const environment = {
   production: false,
   apiCep: 'https://viacep.com.br/ws/',
-  apiMovie: 'https://api.themoviedb.org/3/movie/upcoming'
+  apiMovie: 'https://api.themoviedb.org/3/movie/upcoming',
+  apiCadastro: 'http://localhost'
 };
 
 /*

@@ -2,22 +2,20 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
-  selector: 'app-dados-pessoais',
-  templateUrl: './dados-pessoais.component.html',
-  styleUrls: ['./dados-pessoais.component.css']
+  selector: 'app-dados-acompanhante',
+  templateUrl: './dados-acompanhante.component.html',
+  styleUrls: ['./dados-acompanhante.component.css']
 })
-export class DadosPessoaisComponent implements OnInit {
-  formDadosPessoais: FormGroup;
-  checked = false;
-
+export class DadosAcompanhanteComponent implements OnInit {
+  formAcompanhanter: FormGroup;
   public maskCpf = [/\d/, /\d/, /\d/, '.', /\d/, /\d/, /\d/, '.', /\d/, /\d/, /\d/, '-', /\d/, /\d/,];
+  
   constructor(
     private fb: FormBuilder
-  ) {
-  }
+  ) { }
 
   ngOnInit() {
-    this.formDadosPessoais = this.fb.group({
+    this.formAcompanhanter = this.fb.group({
       primeiroNome: [null, Validators.required],
       segundoNome: [null, Validators.required],
       nuCpf: [null, Validators.required],
@@ -26,8 +24,4 @@ export class DadosPessoaisComponent implements OnInit {
     });
   }
 
-  public click(event) {
-    this.checked = !event;
-    console.log(this.checked);
-  }
 }

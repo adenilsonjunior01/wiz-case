@@ -13,13 +13,6 @@ export class DadosEntregaComponent implements OnInit {
   formDadosEntrega: FormGroup;
   loadingCep = false;
 
-  pais: any[] = [
-    { value: '<18', label: 'Under 18' },
-    { value: '18', label: '18' },
-    { value: '>18', label: 'More than 18' },
-  ];
-  estados: any[];
-
   constructor(
     private fb: FormBuilder,
     private config: NgSelectConfig,
@@ -27,12 +20,11 @@ export class DadosEntregaComponent implements OnInit {
   ) {
     this.config.notFoundText = 'Sem registros';
   }
-
+  public maskCep = [/\d/, /\d/, /\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/];
   ngOnInit() {
     this.formDadosEntrega = this.fb.group({
       cep: [null, [Validators.required, Validators.maxLength(8)]],
       endereco: [null, Validators.required],
-      pais: [null, Validators.required],
       estado: [null, Validators.required],
       cidade: [null, Validators.required],
       telefone: [null, Validators.required]

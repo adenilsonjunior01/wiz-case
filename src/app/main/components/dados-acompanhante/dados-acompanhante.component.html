@@ -1,0 +1,41 @@
+<h3 class="mt-5 mb-5">Acompanhante</h3>
+<form [formGroup]="formAcompanhanter">
+  <div class="row">
+    <div class="col-md-6 col-sm-12">
+      <div class="form-group">
+        <input type="text" id="primeironome" formControlName="primeiroNome" class="form-control" placeholder="Primeiro Nome"
+        [ngClass]="{'is-invalid': !formAcompanhanter.get('primeiroNome').valid && formAcompanhanter.get('primeiroNome').touched}" >
+        <small class="small-invalid" *ngIf="!formAcompanhanter.get('primeiroNome').valid && formAcompanhanter.get('primeiroNome').touched" >* Campo Obrigatório</small>
+      </div>
+    </div><!-- /col-md-6 col-sm-12-->
+    <div class="col-md-6 col-sm-12">
+      <div class="form-group">
+        <input type="text" id="segundonome" formControlName="segundoNome" class="form-control" placeholder="Segundo Nome"
+        [ngClass]="{'is-invalid': !formAcompanhanter.get('segundoNome').valid && formAcompanhanter.get('segundoNome').touched}">
+        <small class="small-invalid" *ngIf="!formAcompanhanter.get('segundoNome').valid && formAcompanhanter.get('segundoNome').touched" >* Campo Obrigatório</small>
+      </div>
+    </div><!-- /col-md-6 col-sm-12-->
+    <div class="col-md-6 col-sm-12">
+      <div class="form-group">
+        <input type="text" id="nuCpf" formControlName="nuCpf" class="form-control" placeholder="CPF" [textMask]="{mask: maskCpf, guide: true, modelClean: true}"
+        [ngClass]="{'is-invalid': !formAcompanhanter.get('nuCpf').valid && formAcompanhanter.get('nuCpf').touched}">
+        <small class="small-invalid" *ngIf="!formAcompanhanter.get('nuCpf').valid && formAcompanhanter.get('nuCpf').touched" >* Campo Obrigatório</small>
+      </div>
+    </div><!-- /col-md-6 col-sm-12-->
+    <div class="col-md-6 col-sm-12">
+      <div class="form-group">
+        <input type="text" id="dtNascimento" formControlName="dtNascimento" class="form-control" placeholder="Data de Nascimento"  bsDatepicker  [bsConfig]="{ dateInputFormat: 'DD/MM/YYYY', containerClass: 'theme-blue',isAnimated: true }"
+        [ngClass]="{'is-invalid': !formAcompanhanter.get('dtNascimento').valid && formAcompanhanter.get('dtNascimento').touched}">
+        <small class="small-invalid" *ngIf="!formAcompanhanter.get('dtNascimento').valid && formAcompanhanter.get('dtNascimento').touched" >* Campo Obrigatório</small>
+      </div>
+    </div><!-- /col-md-6 col-sm-12-->
+    <div class="col-12">
+      <div class="form-group">
+        <input type="email" id="email" formControlName="email" class="form-control" placeholder="Email"
+        [ngClass]="{'is-invalid': !formAcompanhanter.get('email').valid && formAcompanhanter.get('email').touched}">
+        <small class="small-invalid" *ngIf="!formAcompanhanter.get('email').valid && formAcompanhanter.get('email').touched" >* Campo Obrigatório</small>
+      </div>
+    </div><!-- /col-md-6 col-sm-12-->
+  </div>
+</form>
+

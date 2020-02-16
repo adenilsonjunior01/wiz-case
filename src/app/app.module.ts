@@ -11,14 +11,23 @@ import { DadosEntregaComponent } from './main/components/dados-entrega/dados-ent
 import { NgSelectModule } from '@ng-select/ng-select';
 import { HttpClientModule } from '@angular/common/http';
 import { DadosFilmeComponent } from './main/components/dados-filme/dados-filme.component';
+import { DadosAcompanhanteComponent } from './main/components/dados-acompanhante/dados-acompanhante.component';
+import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { TextMaskModule } from 'angular2-text-mask';
 
+import { defineLocale } from 'ngx-bootstrap/chronos';
+import { deLocale } from 'ngx-bootstrap/locale';
+
+defineLocale('de', deLocale);
 registerLocaleData(localePt, 'pt');
 @NgModule({
   declarations: [
     AppComponent,
     DadosPessoaisComponent,
     DadosEntregaComponent,
-    DadosFilmeComponent
+    DadosFilmeComponent,
+    DadosAcompanhanteComponent
   ],
   imports: [
     CommonModule,
@@ -26,7 +35,10 @@ registerLocaleData(localePt, 'pt');
     FormsModule,
     ReactiveFormsModule,
     NgSelectModule,
-    HttpClientModule
+    HttpClientModule,
+    BsDatepickerModule.forRoot(),
+    BrowserAnimationsModule,
+    TextMaskModule
   ],
   providers: [
     { provide: LOCALE_ID, useValue: 'pt'}

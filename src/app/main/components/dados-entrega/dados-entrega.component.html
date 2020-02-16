@@ -4,6 +4,7 @@
     <div class="col-md-12">
       <div class="form-group">
         <input type="text" class="form-control" formControlName="cep" id="cep" placeholder="CEP" (change)="getDadosEntrega($event.target.value)"
+        
         [ngClass]="{'is-invalid': !formDadosEntrega.get('cep').valid && formDadosEntrega.get('cep').touched}">
         <small class="small-invalid" *ngIf="!formDadosEntrega.get('cep').valid && formDadosEntrega.get('cep').touched" >* Campo Obrigatório</small>
         <div  *ngIf="loadingCep" class="mt-2 edit-loading d-flex align-items-center">

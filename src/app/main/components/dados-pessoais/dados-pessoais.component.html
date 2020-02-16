@@ -16,14 +16,14 @@
     </div><!-- /col-md-6 col-sm-12-->
     <div class="col-md-6 col-sm-12">
       <div class="form-group">
-        <input type="text" id="nuCpf" formControlName="nuCpf" class="form-control" placeholder="CPF"
+        <input type="text" id="nuCpf" formControlName="nuCpf" class="form-control" placeholder="CPF"  [textMask]="{mask: maskCpf, guide: true, modelClean: true}"
         [ngClass]="{'is-invalid': !formDadosPessoais.get('nuCpf').valid && formDadosPessoais.get('nuCpf').touched}">
         <small class="small-invalid" *ngIf="!formDadosPessoais.get('nuCpf').valid && formDadosPessoais.get('nuCpf').touched" >* Campo Obrigatório</small>
       </div>
     </div><!-- /col-md-6 col-sm-12-->
     <div class="col-md-6 col-sm-12">
       <div class="form-group">
-        <input type="text" id="dtNascimento" formControlName="dtNascimento" class="form-control" placeholder="Data de Nascimento"
+        <input type="text" id="dtNascimento" formControlName="dtNascimento" class="form-control" placeholder="Data de Nascimento" bsDatepicker  [bsConfig]="{ dateInputFormat: 'DD/MM/YYYY', containerClass: 'theme-blue',isAnimated: true }"
         [ngClass]="{'is-invalid': !formDadosPessoais.get('dtNascimento').valid && formDadosPessoais.get('dtNascimento').touched}">
         <small class="small-invalid" *ngIf="!formDadosPessoais.get('dtNascimento').valid && formDadosPessoais.get('dtNascimento').touched" >* Campo Obrigatório</small>
       </div>
@@ -35,12 +35,7 @@
         <small class="small-invalid" *ngIf="!formDadosPessoais.get('email').valid && formDadosPessoais.get('email').touched" >* Campo Obrigatório</small>
       </div>
     </div><!-- /col-md-6 col-sm-12-->
-    <div class="col-12">
-      <div class="form-check form-check-inline">
-        <input class="form-check-input" type="checkbox" id="check" (click)="click($event.target.value)" value={{checked}}>
-        <label class="form-check-label" for="check">Adicionar Acompanhante</label>
-      </div>
-    </div>
+
   </div>
 </form>
 
